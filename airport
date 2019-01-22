@@ -1,0 +1,83 @@
+import java.util.*;
+
+public class airport
+{
+	private String name;
+	private ArrayList<String> adjAP = new ArrayList();
+	private ArrayList<Integer> adjAPCost = new ArrayList();
+	private airport path;
+	private boolean known;
+	private int cost;
+	private int CX = 0;
+
+	public airport(String name)
+	{
+		this.name = name;
+	}
+
+	public String getName()
+	{
+		return name;
+	}
+
+	public boolean getKnown()
+	{
+		return known;
+	}
+
+	public int getCost()
+	{
+		return cost;
+	}
+
+	public int getCX()
+	{
+		return CX;
+	}
+
+	public airport getPath()
+	{
+		return path;
+	}
+
+	public int getAdjAP()
+	{
+		return adjAP.size();
+	}
+
+	public String getAdjAP(int index)
+	{
+		return adjAP.get(index);
+	}
+
+	public int getAdjAPCost(int index)
+	{
+		return adjAPCost.get(index);
+	}
+
+	public void setCost(int price)
+	{
+		cost = price;
+	}
+
+	public void setKnown(boolean status)
+	{
+		known = status;
+	}
+
+	public void setPath(airport ap)
+	{
+		path = ap;
+	}
+
+	public void setCX(int value)
+	{
+		CX = value;
+	}
+
+	public void addAdjAP(String ap, int cost)
+	{
+		adjAP.add(ap);
+		adjAPCost.add(cost);
+	}
+}
